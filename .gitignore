@@ -10,5 +10,7 @@
 /test/dummy/tmp/
 .byebug_history
 test/dummy/db/
+/.idea/
+.DS_Store
 
 *.gem
