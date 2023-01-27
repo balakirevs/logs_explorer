@@ -1,0 +1,157 @@
+
+html, body {
+  scrollbar-width: none;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+.page-header {
+  position: fixed;
+  right: 0;
+  left: 0;
+  z-index: 100;
+  background-color: black;
+}
+
+.page-footer {
+  position: fixed;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  padding: 20px;
+}
+
+.page-content {
+  padding: 70px 20px 0 20px;
+  position: relative;
+}
+   
+.loader-wrapper {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.is-loading {
+  left: calc(50% - 0.5em);
+  top: 35%
+}
+
+.scrollable-content {
+  position: relative;
+  width: 100%;
+  font-family: Consolas, "Ubuntu Mono";
+  font-size: 13px;
+  line-height: 17px;
+  overflow-y: scroll;
+
+  /* Firefox custom scrollbar */
+  scrollbar-width: thin;
+  scrollbar-color: #888 black;
+}
+
+#logs {
+  height: calc(100vh - 150px);
+  white-space: pre-wrap;
+}
+
+/* Webkit custom scrollbar */
+.scrollable-content::-webkit-scrollbar {
+  width: 7px;
+}
+.scrollable-content::-webkit-scrollbar-track {
+  background: black;
+}  
+.scrollable-content::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 3px;
+}  
+.scrollable-content::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+#controls {
+  padding-top: 20px;
+}
+
+#controls a svg {
+  width: 16px;
+  height: 16px;
+  margin-right: 6px;
+}
+
+.github-ext {
+  display: inline-block;
+  margin-top: 15px;
+  height: 14px;
+}
+
+.github-ext svg {
+  height: 14px;
+  width: 14px;
+}
+
+#three-dots {
+  display: inline-block;
+  margin-left: 20px;
+  padding-top: 5px;
+}
+
+#three-dots svg {
+  height: 4px;
+}
+
+#console {
+  height: calc(100vh - 256px);
+}
+
+#console.hidden {
+  opacity: 0.5;
+}
+
+.console-icon svg {
+  margin-top: 6px;
+  width: 24px;
+  height: 24px;
+  margin-right: 8px;
+}
+
+#command-output {
+  overflow-y: scroll;
+  font-family: Consolas, "Ubuntu Mono";
+  font-size: 13px;
+  line-height: 17px;
+}
+
+.textarea {
+  min-height: auto !important;
+  height: 100px !important;
+  margin-bottom: 15px !important;
+  background-color:  #292929;
+  border: none;
+  color: white;
+}
+
+.textarea::placeholder {
+  color: silver;
+}
+
+pre {
+  background-color:#1c1b1b !important;
+}
+
+.execute-btn svg {
+  width: 16px;
+  height: 16px;
+  margin-right: 6px;
+}
+
+.console-content.loader-wrapper {
+  display: none;
+}
+
+.tabs.is-large {
+  font-size: 1rem;
+}

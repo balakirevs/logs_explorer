@@ -1,0 +1,24 @@
+<div class="page-header tabs is-large">
+  <ul>
+    <% LogsExplorer.logs.each_with_index do |log, index| %>
+      <li class="<%= 'is-active' if log[:name] == params[:name] || (index == 0 && params[:name].blank? && controller_name == 'logs')  %>">
+        <%= link_to log[:name], logs_explorer.watch_url(name: log[:name]), "changes_url" => logs_explorer.changes_url(name: log[:name]) %>
+      </li>
+    <% end %>
+
+    <% if LogsExplorer.console %>
+      <li class="<%= 'is-active' if controller_name == 'console' %>">
+        <%= link_to logs_explorer.console_url, class: 'console-icon' do %>
+          <%= icon 'ror' %>
+          console
+        <% end %>
+      </li>
+    <% end %>
+
+    <% LogsExplorer.commands.each_with_index do |command, index| %>
+      <li class="<%= 'is-active' if command[:name] == params[:name] || (index == 0 && params[:name].blank? && controller_name == 'commands')  %>">
+        <%= link_to command[:name], logs_explorer.call_url(name: command[:name]) %>
+      </li>
+    <% end %>
+  </ul>
+</div>

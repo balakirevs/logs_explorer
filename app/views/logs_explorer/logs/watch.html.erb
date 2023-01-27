@@ -1,0 +1,35 @@
+<%= provide :title, params[:name] %>
+
+<script>
+  $(function() {
+    logsWorkerInit();
+  });
+</script>
+
+<div class="page-content">
+  <div class="loader-wrapper">
+    <div class="loader is-loading"></div>
+  </div>
+  <div id="logs" class="scrollable-content"></div>
+</div>
+
+<div class="page-footer columns is-fluid" id="controls">
+  <div class="column">
+    <a class="button" id="pause" onclick="pauseButton();">
+      <%= icon 'pause2' %>
+      Pause
+    </a>
+    <a class="button is-hidden" id="start" onclick="startButton();">
+      <%= icon 'play3' %>
+      Start
+    </a>
+    <a class="button" id="clear" onclick="clearButton();">
+      <%= icon 'record' %>
+      Clear
+    </a>
+
+    <span id='three-dots'>
+      <%= icon 'three-dots' %>
+    </span>
+  </div>
+</div>

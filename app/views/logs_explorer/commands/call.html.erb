@@ -1,0 +1,13 @@
+<%= provide :title, params[:name] %>
+
+<script>
+  $(function() {
+    commandsWorkerInit();
+  });
+</script>
+
+<div class="page-content">
+  <div id="command-output">
+    <pre><%= @result.to_s.chomp %></pre>
+  </div>
+</div>

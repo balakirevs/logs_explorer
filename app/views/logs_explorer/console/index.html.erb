@@ -1,0 +1,22 @@
+<%= provide :title, "Rails Console" %>
+
+<script>
+  $(function() {
+    consoleWorkerInit();
+  });
+</script>
+
+<div class="page-content">
+  <div class="console-content loader-wrapper">
+    <div class="loader is-loading"></div>
+  </div>
+  <div id="console" class="scrollable-content"></div>
+
+  <div class="query-form page-footer">
+    <textarea id="input" class="query-field textarea" placeholder="Your code here ..." url="<%= logs_explorer.execute_url %>"></textarea>
+    <button class="execute-btn button" id="clear" onclick="executeConsole();">
+      <%= icon 'play' %>
+      Execute
+    </button>
+  </div>
+</div>
