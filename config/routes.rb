@@ -4,6 +4,7 @@ LogsExplorer::Engine.routes.draw do
   get '/' => 'home#index', as: :home
   get '/watch' => 'logs#watch', as: :watch
   get '/watch/changes' => 'logs#changes', as: :changes
+  get '/watch/download' => 'logs#download', as: :download
 
   get '/console' => 'console#index', as: :console
   post '/execute' => 'console#execute', as: :execute

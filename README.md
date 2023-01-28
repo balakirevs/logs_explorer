@@ -53,6 +53,12 @@ LogsExplorer.setup do |config|
 end if defined?(LogsExplorer)
 ```
 
+To execute rake task from the browser console, use the following syntax:
+```ruby
+Rake::Task['task_name'].execute # or
+Rake::Task['task_name'].invoke
+```
+
 You can use configuration options above to protect access to the logs for a specific user or by HTTP BASIC auth.
 
 Please note, that this is not a real Rails console as we used, it's basically evaluating Ruby code sent to the server (stateless).

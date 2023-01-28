@@ -13,6 +13,10 @@ module LogsExplorer
         @total_lines = log_file.total_lines
       end
 
+      def download
+        send_file log_file.path
+      end
+
       def log_file
         @log_file ||= begin
           item = LogsExplorer.logs.detect {|e| e[:name] == params[:name]}

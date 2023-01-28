@@ -27,6 +27,10 @@
       <%= icon 'record' %>
       Clear
     </a>
+    <%= link_to logs_explorer.download_path(name: params[:name]), class: 'button' do %>
+      <%= icon 'download' %>
+      Download
+    <% end %>
 
     <span id='three-dots'>
       <%= icon 'three-dots' %>

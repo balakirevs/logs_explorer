@@ -1,5 +1,6 @@
 # frozen_string_literal: true
 
+Rails.application.class.parent_name.constantize::Application.load_tasks if defined?(Rails)
 require_relative './base_controller.rb'
 
 module LogsExplorer
