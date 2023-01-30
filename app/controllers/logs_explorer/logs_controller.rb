@@ -20,7 +20,7 @@ module LogsExplorer
       def log_file
         @log_file ||= begin
           item = LogsExplorer.logs.detect {|e| e[:name] == params[:name]}
-          LogFile.new(path: "#{::Rails.root}/#{item[:path]}", client_total_lines: params[:client_total_lines])
+          LogFile.new(path: item[:path], client_total_lines: params[:client_total_lines])
         end
       end
     end

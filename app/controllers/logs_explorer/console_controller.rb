@@ -7,8 +7,7 @@ module LogsExplorer
   class ConsoleController < LogsExplorer::BaseController
 
     if LogsExplorer.enabled && LogsExplorer.console
-      def index
-      end
+      def index; end
 
       def execute
         @result = eval(params[:code])
